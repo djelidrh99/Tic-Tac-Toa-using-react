@@ -53,9 +53,12 @@ export default function TicTacToa() {
         if(board[a]===board[b]&&board[a]===board[c] && board[a]!==null) {
             console.log("winner")
             setStateWinner(`${board[a]} is the winner`)
+            return
         }
-        return null
 
+    }
+    if (!board.includes(null)) {
+        setStateWinner("It's a draw!");
     }
     
   }
